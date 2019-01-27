@@ -8,6 +8,15 @@ rem --------------------------------------------------------------------------
 title PingThing
 echo Initializing...
 
+rem Check if machine list exists. If user doesn't supply one, exit
+if not exist machineList.txt (
+    cls
+    echo Error: machineList.txt not found. Please supply a list of servers to ping and try again
+    echo.
+    pause
+    if not exist machineList.txt exit
+)
+
 rem Get number of servers to ping
 set /a numServers=0
 for /f %%a in (machineList.txt) do set /a numServers+=1
