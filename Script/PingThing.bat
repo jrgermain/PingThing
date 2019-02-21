@@ -6,7 +6,6 @@ rem v1.0 - January 2019 - Joey Germain
 rem --------------------------------------------------------------------------
 
 title PingThing
-echo Initializing...
 
 rem Check if machine list exists. If user doesn't supply one, exit
 if not exist machineList.txt (
@@ -16,6 +15,8 @@ if not exist machineList.txt (
     pause
     if not exist machineList.txt exit
 )
+
+echo Initializing...
 
 rem Get number of servers to ping
 set /a numServers=0
