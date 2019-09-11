@@ -2,7 +2,7 @@
 
 rem --------------------------------------------------------------------------
 rem PingThing - Quickly ping a list of servers and see if they respond
-rem v1.0 - January 2019 - Joey Germain
+rem v1.1 - September 2019 - Joey Germain
 rem --------------------------------------------------------------------------
 
 title PingThing
