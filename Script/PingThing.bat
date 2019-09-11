@@ -36,6 +36,7 @@ del %temp%\pingthing.txt
 
 rem Open results
 start result.csv
+exit
 
 
 rem --------------------------------------------------------------------------
@@ -43,6 +44,9 @@ rem Server ping subroutine
 rem --------------------------------------------------------------------------
 
 :pingServer
+
+set /a currentServer+=1
+title PingThing - %currentServer%/%numServers%
 
 ping -n 1 -w 2500 %1 > %temp%\pingthing.txt
 
@@ -59,8 +63,5 @@ if not errorlevel 1 (
 )
 
 echo %1, Ok
-
-set /a currentServer+=1
-title PingThing - %currentServer%/%numServers%
 
 exit /b
